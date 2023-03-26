@@ -1,0 +1,23 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.hero {
+    min-height: 60rem;
+    background-image: url(../img/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    &__text {
+        max-width: 60rem;
+        color: v.$white;
+    }
+
+    &__link {
+        @include m.button(v.$tertiary, v.$white);
+    }
+}
