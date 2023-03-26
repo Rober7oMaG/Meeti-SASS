@@ -1,0 +1,63 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.events {
+    padding: 5rem 0;
+
+    &__heading {
+        @include m.heading;
+    }
+
+    &__grid {
+        margin-top: 2rem;
+        @include m.grid(1, 2rem);
+
+        @include m.tablet {
+            @include m.grid(3, 2rem);
+        }
+    }
+}
+
+.event {
+    border: 1px solid v.$lightGray;
+
+    &__image {
+        width: 100%;
+    }
+
+    &__content {
+        padding: 2rem;
+    }
+
+    &__date {
+        font-size: 1.4rem;
+        margin: 0;
+    }
+
+    &__name {
+        color: v.$gray;
+        margin: 1rem 0;
+    }
+
+    &__author {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        margin-top: 2rem;
+
+        &-image {
+            width: 10rem;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+    }
+
+    &__organized-text,
+    &__organized-by {
+        margin: 0.5rem 0;
+    }
+
+    &__organized-text {
+        font-weight: 700;
+    }
+}
