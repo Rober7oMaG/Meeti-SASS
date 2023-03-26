@@ -1,0 +1,35 @@
+@use 'base/variables' as v;
+
+h1, h2, h3 {
+    margin: 0;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 4.4rem;
+    font-family: v.$headingFont;
+}
+
+h2 {
+    font-size: 4rem;
+    font-family: v.$headingFont;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+[class$="heading"] {
+    margin: 2rem 0;
+}
+
+a {
+    text-decoration: none;
+    color: v.$black;
+}
+
+p {
+    color: v.$black;
+    font-size: 1.6rem;
+    line-height: 1.8;
+}
